@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RP/Mod ダウンロード</title>
+  <style>
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+ 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    table th {
+      background-color: #f1f1f1;
+    }
+
+ 
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+   
+    .file-row {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 0.5s forwards;
+    }
+    .file-row:nth-child(1) { animation-delay: 0.2s; }
+    .file-row:nth-child(2) { animation-delay: 0.4s; }
+    .file-row:nth-child(3) { animation-delay: 0.6s; }
+    
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>下载文件</h1>
+    <table id="fileTable">
+      <thead>
+        <tr>
+          <th>文件名</th>
+          <th>文件大小</th>
+          <th>上传时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="file-row">
+          <td>Vallia+ beta#1 RP</td>
+          <td>None</td>
+          <td>None</td>
+          <td><button class="btn" onclick="downloadFile('Vallia+ beta#1 RP ')">下载/ダウンロード</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function downloadFile(fileName) {
+      alert('开始下载文件: ' + fileName);
+    }
+  </script>
+</body>
+</html>

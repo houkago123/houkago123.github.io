@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>放課後テイータイム</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <h1>放課後テイータイム</h1>
+    <div class="buttons">
+      <button class="btn" onclick="redirectToIntro()">介绍</button>
+      <button class="btn" onclick="redirectToDownload()">作品</button>
+      <button class="btn" onclick="redirectToNihongo()">日语选择肢</button>
+      <button class="btn" onclick="redirectToEnglish()">English</button>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  function redirectToIntro() {
+    window.location.href = 'intro.html'; 
+  }
+
+
+  function redirectToDownload() {
+    window.location.href = 'download.html'; 
+  }
+
+  function redirectToNihongo() {
+    window.location.href = 'indexjp.html'; 
+  }
+
+  function redirectToEnglish() {
+    window.location.href = 'indexen.html'; 
+  }
+</script>
+
+</body>
+</html>

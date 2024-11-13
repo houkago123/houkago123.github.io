@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'CustomFont'; 
+    src: url('Fonts/futomaru401.ttf') format('truetype');/* 字体文件路径，假设你把字体放在 'fonts' 文件夹 */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html {
+    height: 100%;
+    font-family: 'CustomFont', sans-serif;
+}
+
+
+.container {
+    height: 100vh;
+    background-image: url('images/tyrxh-2e9k0.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: center; 
+}
+
+
+.content {
+    max-width: 90%; 
+}
+
+
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); 
+    margin-bottom: 40px;
+    font-weight: bold; 
+}
+
+
+.btn {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 12px 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-sizing: border-box; 
+}
+
+
+.btn:hover {
+    border-color: black;
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px; 
+    }
+    .btn {
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px; 
+    }
+    .btn {
+        font-size: 14px; 
+        padding: 8px 15px; 
+    }
+}
