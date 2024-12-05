@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放課後テイータイム</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 36px; 
+      text-align: left; 
+    }
+    p {
+      font-size: 16px; 
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JSPT - 选择肢 3 </h1>
+  <p>选择你想要的测试题！</p>
+  <p>有更多想法请发送Email - 3129392318@qq.com</p> 
+  <div class="container">
+    <div class="content">
+      <div class="buttons">
+        <button class="btn" onclick="redirectToN5Easy111()">N5Easy-1-1-1</button>
+        <button class="btn" onclick="redirectToN5Before()">返回上一页</button>
+        <button class="btn" onclick="redirectToN5Wiki()">不了解测试规则？点这里跳转到Wiki！</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function redirectToN5Easy111() {
+      window.location.href = 'N5Easy111.html'; 
+    }
+
+    function redirectToN5Before() {
+      window.location.href = 'JSPTChoose.html'; 
+    }
+
+    function redirectToN5Wiki() {
+      window.location.href = 'Wiki.html'; 
+    }
+  </script>
+</body>
+</html>

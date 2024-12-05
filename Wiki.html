@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放課後テイータイム</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 36px; 
+      text-align: left; 
+    }
+    p {
+      font-size: 16px; 
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>WIki - 关于难度</h1>
+  <p>Easy难度跟Diff难度的区别为</p>
+  <p>是否限时 / 题目难度 / 题目多少</p>
+  <p>由于是GitHub静态网页暂且无法进行排名！</p>
+
+  <h1>WIki - 关于分数</h1>
+  <p>评分标准为：不合格 / 合格 / 满分</p>
+  <p>不会有具体的评分标准</p>
+  
+  <h1>WIki - 关于题目</h1>
+  <p>题目类型包括以下</p>
+  <p>选择题 / 填空题 / 听力 / 附加</p>
+  <p>其中附加题型只有DIff难度有，其他题型对比easy难度也会加多题目</p>
+
+  <h1>WIki - 关于序列</h1>
+  <p>测试的序列很重要</p>
+  <p>例：N5Easy-1-1-1</p>
+  <p>其中N5代表这份测试范围等级，Easy代表你选择的测试难度</p>
+  <p>第一个1表示单元，也就是第一单元 / 第二个1表示第一课 / 第三个1为1号测试题</p>
+
+  <h1>返回JSPT！</h1>
+  <div class="container">
+    <div class="content">
+      <div class="buttons">
+        <button class="btn" onclick="redirectToJSPT()">返回后就开始做题哦？</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function redirectToJSPT() {
+      window.location.href = 'JSPT.html'; 
+    }
+  </script>
+</body>
+</html>

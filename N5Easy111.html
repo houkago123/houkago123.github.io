@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语N5自我能力测试</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .question {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .question p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .question input[type="radio"],
+        .question input[type="text"] {
+            margin-right: 10px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: calc(100% - 16px);
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        }
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        .result.show {
+            opacity: 1;
+        }
+        .animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>日语N5自我能力测试 - 第一单元第一课一号试卷</h1>
+
+    <div class="question">
+        <p>1.选择题(1) :当你不小心碰到别人 / 你需要道歉的场合，该使用以下哪个用语</p>
+        <input type="radio" name="q1" value="0"> A. どうも<br>
+        <input type="radio" name="q1" value="1"> B. すみません<br>
+        <input type="radio" name="q1" value="0"> C. さようなら<br>
+    </div>
+
+    <div class="question">
+        <p>(2)： 判断上述句子需要补充以下哪个词汇：井ノ坂さんは（会社員・学生）ですか？
+            ーーーいいえ，ちがいます，会社員じゃありません。学生です。
+        </p>
+        <input type="radio" name="q2" value="1"> A. 会社員<br>
+        <input type="radio" name="q2" value="0"> B. 学生<br>
+    </div>
+
+    <div class="question">
+        <p>(3)：日语中的"さようなら"是什么意思？</p>
+        <input type="radio" name="q3" value="1"> A. 再见<br>
+        <input type="radio" name="q3" value="0"> B. 你好<br>
+        <input type="radio" name="q3" value="0"> C. 早上好<br>
+    </div>
+
+    <div class="question">
+        <p>(4)：根据以下对话判断森先生是否是学生
+            A: こんにちは、田中さん。
+
+B: こんにちは、佐藤さん。あれ、あの人は誰ですか？
+
+A: あの人は森さんです。
+
+B: 森さんは学生ですか？
+
+A: いいえ、森さんは学生じゃありません。
+
+B: じゃあ、森さんは何ですか？
+
+A: 森さんは会社員です。
+
+B: そうですか。ありがとうございます。
+
+A: どういたしまして。
+        </p>
+        <input type="radio" name="q4" value="0"> A. そうです<br>
+        <input type="radio" name="q4" value="1"> B.　いいえ、ちがいます <br>
+    </div>
+
+    <div class="question">
+        <p>2. 填空题：翻译“森先生不是学生”</p>
+        <input type="text" id="q5" placeholder="请输入答案"><br>
+    </div>
+
+    <div class="button-container">
+        <button onclick="submitExam()">交卷</button>
+    </div>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function submitExam() {
+            let score = 0;
+            let totalQuestions = 5;
+
+            // 选择题1的答案
+            if (document.querySelector('input[name="q1"]:checked')?.value === '1') {
+                score++;
+            }
+
+            // 选择题2的答案
+            if (document.querySelector('input[name="q2"]:checked')?.value === '1') {
+                score++;
+            }
+
+            // 选择题3的答案
+            if (document.querySelector('input[name="q3"]:checked')?.value === '1') {
+                score++;
+            }
+
+            // 选择题4的答案
+            if (document.querySelector('input[name="q4"]:checked')?.value === '1') {
+                score++;
+            }
+
+            // 填空题5的答案
+            if (document.getElementById('q5').value.trim() === '森さんは学生ではありません') {
+                score++;
+            }
+
+            // 计算得分占比
+            let scorePercentage = score / totalQuestions * 100;
+
+            let resultText = "";
+            if (scorePercentage === 100) {
+                resultText = "满分！";
+            } else if (scorePercentage >= 60) {
+                resultText = "合格！你答对了 " + score + " 道题。";
+            } else {
+                resultText = "不合格！但是你答对了 " + score + " 道题。";
+            }
+
+            let resultElement = document.getElementById('result');
+            resultElement.innerHTML = resultText;
+            resultElement.classList.add("show");
+        }
+
+        // 防止右键菜单
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault(); // 禁止右键菜单
+        });
+
+        // 禁用F12和Ctrl+Shift+I
+        document.onkeydown = function (e) {
+            if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+                e.preventDefault(); // 禁用F12和Ctrl+Shift+I
+            }
+        };
+    </script>
+
+</body>
+</html>

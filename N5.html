@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放課後テイータイム</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 36px; 
+      text-align: left; 
+    }
+    p {
+      font-size: 16px; 
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JSPT - 选择肢 2 </h1>
+  <p>选择你想要对应范围的难度！</p>
+  <p>有更多想法请发送Email - 3129392318@qq.com</p> 
+  <div class="container">
+    <div class="content">
+      <div class="buttons">
+        <button class="btn" onclick="redirectToN5Easy()">Easy</button>
+        <button class="btn" onclick="redirectToN5Diff()">Diff</button>
+        <button class="btn" onclick="redirectToN5Before()">返回上一页</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function redirectToN5Easy() {
+      window.location.href = 'N5Easy.html'; 
+    }
+
+    function redirectToN5Diff() {
+      window.location.href = 'N5Diff.html'; 
+    }
+
+    function redirectToN5Before() {
+      window.location.href = 'JSPTChoose.html'; 
+    }
+  </script>
+</body>
+</html>

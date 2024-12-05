@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放課後テイータイム</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 36px; 
+      text-align: left; 
+    }
+    p {
+      font-size: 16px; 
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JSPT - 选择肢 1 </h1>
+  <p>目前网站只开放对日语等级N5的题目以及题型！</p>
+  <p>有更多想法请发送Email - 3129392318@qq.com</p> 
+  <div class="container">
+    <div class="content">
+      <div class="buttons">
+        <button class="btn" onclick="redirectToN5()">点击这里进入N5范围题型</button>
+        <button class="btn" onclick="redirectToIndex()">返回主页</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function redirectToN5() {
+      window.location.href = 'N5.html'; 
+    }
+
+    function redirectToIndex() {
+      window.location.href = 'index.html'; 
+    }
+  </script>
+</body>
+</html>

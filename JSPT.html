@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>放課後テイータイム</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 36px; 
+      text-align: left; 
+    }
+    p {
+      font-size: 16px; 
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>关于接下来的测试</h1>
+  <p>JSPT全名为“Japanese Self-Proficiency Test”，旨在为所有学习日语的人提供对应的训练题目</p>
+  <p>训练题目主要会从“新标日”以及其他抽出题型，并且进行变体</p>
+  <p>训练题目分为Easy 和 Difficult</p>
+  <p>希望你可以在这个网站提升自己的日语水平！</p>
+  </p> 
+  <h1>关于题目的定义</h1>
+  <div class="container">
+    <div class="content">
+      <div class="buttons">
+        <button class="btn" onclick="redirectToAbout()">点击这里查看本网站的WIki</button>
+        <button class="btn" onclick="redirectToChoose()">点击这里进入选择肢</button>
+        <button class="btn" onclick="redirectToIndex()">返回主页</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    function redirectToAbout() {
+      window.location.href = 'Wiki.html'; 
+    }
+
+    function redirectToChoose() {
+      window.location.href = 'JSPTChoose.html'; 
+    }
+
+    function redirectToIndex() {
+      window.location.href = 'index.html'; 
+    }
+  </script>
+</body>
+</html>
